@@ -1,0 +1,12 @@
+{
+  "Navigations": {
+    "shares": "Акции",
+    "credit": "Кредит",
+    "paymentAndDelivery": "Оплата и доставка",
+    "help": "Помощь",
+    "contact": "Контакт"
+  },
+  "ButtonPrimary": {
+    "productCategory": "КАТАЛОГ ТОВАРОВ"
+  }
+}

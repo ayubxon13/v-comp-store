@@ -1,0 +1,12 @@
+{
+  "Navigations": {
+    "shares": "Shares",
+    "credit": "Credit",
+    "paymentAndDelivery": "Payment and delivery",
+    "help": "Help",
+    "contact": "Contact"
+  },
+  "ButtonPrimary": {
+    "productCategory": "PRODUCT CATEGORY"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Navigations": {
+    "shares": "Aksiyalar",
+    "credit": "Kredit",
+    "paymentAndDelivery": "To'lov va yetkazib berish",
+    "help": "Yordam",
+    "contact": "Aloqa"
+  },
+  "ButtonPrimary": {
+    "productCategory": "MAHSULOT KATALOGI"
+  }
+}
