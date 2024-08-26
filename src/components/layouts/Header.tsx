@@ -33,6 +33,7 @@ export default function Header() {
               </button>
               {navBars.map((nav) => (
                 <Link
+                  key={nav}
                   href="/"
                   className="text-titles-normal-t-14 hover:text-opacity-70 text-soft"
                 >
