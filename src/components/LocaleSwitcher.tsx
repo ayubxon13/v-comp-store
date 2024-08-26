@@ -1,7 +1,7 @@
 "use client";
-import { useRouter, usePathname } from "@/messages/navigation";
-import { useParams } from "next/navigation";
-import { useTransition } from "react";
+import {useRouter, usePathname} from "@/messages/navigation";
+import {useParams} from "next/navigation";
+import {useTransition} from "react";
 
 export default function LocaleSwitcherSelect() {
   const router = useRouter();
@@ -14,34 +14,39 @@ export default function LocaleSwitcherSelect() {
     startTransition(() => {
       router.replace(
         // @ts-ignore
-        { pathname, params },
-        { locale: str },
+        {pathname, params},
+        {locale: str}
       );
     });
   };
 
+  const isActive = (locale: string) => params.locale === locale;
+
   return (
-    <div className="flex items-center gap-2 text-titles-normal-t-10">
+    <div className="flex items-center select-none gap-2 text-titles-normal-t-12">
       <p
-        onClick={() => onChangeLang("ru")}
-        style={{ opacity: params.locale === "ru" ? "0.6" : 1 }}
-        className="text-soft"
+        onClick={() => !isActive("ru") && onChangeLang("ru")}
+        className={`text-soft cursor-pointer hover:text-opacity-70 ${
+          isActive("ru") ? "opacity-60 cursor-default pointer-events-none" : ""
+        }`}
       >
         RU
       </p>
-      <p className="text-soft">/</p>
+      <p className="text-soft cursor-default">/</p>
       <p
-        style={{ opacity: params.locale === "uz" ? "0.6" : 1 }}
-        onClick={() => onChangeLang("uz")}
-        className="text-soft"
+        onClick={() => !isActive("uz") && onChangeLang("uz")}
+        className={`text-soft cursor-pointer hover:text-opacity-70 ${
+          isActive("uz") ? "opacity-60 cursor-default pointer-events-none" : ""
+        }`}
       >
         UZ
       </p>
-      <p className="text-soft">/</p>
+      <p className="text-soft cursor-default">/</p>
       <p
-        style={{ opacity: params.locale === "en" ? "0.6" : 1 }}
-        onClick={() => onChangeLang("en")}
-        className="text-soft"
+        onClick={() => !isActive("en") && onChangeLang("en")}
+        className={`text-soft cursor-pointer hover:text-opacity-70 ${
+          isActive("en") ? "opacity-60 cursor-default pointer-events-none" : ""
+        }`}
       >
         EN
       </p>

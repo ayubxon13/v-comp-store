@@ -8,5 +8,17 @@
   },
   "ButtonPrimary": {
     "productCategory": "КАТАЛОГ ТОВАРОВ"
+  },
+  "LeftCategoryItems": {
+    "pcComponents": "Компоненты ПК",
+    "monitors": "Мониторы",
+    "computers": "Компьютеры",
+    "laptops": "Ноутбуки",
+    "gameConsoles": "Игровые консоли",
+    "laptopcomponents": "Комплектующие к ноутбукам",
+    "tablets": "Планшеты",
+    "printersAndMFPs": "Принтеры и МФУ",
+    "networkEquipment": "Сетевое оборудование",
+    "1": "Network Equipment"
   }
 }

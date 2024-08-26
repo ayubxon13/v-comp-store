@@ -8,5 +8,17 @@
   },
   "ButtonPrimary": {
     "productCategory": "PRODUCT CATEGORY"
+  },
+  "LeftCategoryItems": {
+    "pcComponents": "PC Components",
+    "monitors": "Monitors",
+    "computers": "Computers",
+    "laptops": "Laptops",
+    "gameConsoles": "Game Consoles",
+    "laptopcomponents": "Laptop Components",
+    "tablets": "Tablets",
+    "printersAndMFPs": "Printers And MFPs",
+    "networkEquipment": "Network Equipment",
+    "1": "Network Equipment"
   }
 }

@@ -1,6 +1,6 @@
 export default function SearchInput() {
   return (
-    <form className="w-full">
+    <form className="min-w-[200px] flex-1">
       <div className="flex">
         <div className="relative w-full">
           <input

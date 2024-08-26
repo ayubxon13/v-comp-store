@@ -8,5 +8,17 @@
   },
   "ButtonPrimary": {
     "productCategory": "MAHSULOT KATALOGI"
+  },
+  "LeftCategoryItems": {
+    "pcComponents": "PC bo'limi",
+    "monitors": "Monitorlar",
+    "computers": "Kompyuterlar",
+    "laptops": "Laptoplar",
+    "gameConsoles": "O'yin konsollari",
+    "laptopcomponents": "Laptop qismlari",
+    "tablets": "Planshetlar",
+    "printersAndMFPs": "Printerlar va MFPlar",
+    "networkEquipment": "Tarmoq uskunalari",
+    "1": "Network Equipment"
   }
 }
