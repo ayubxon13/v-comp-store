@@ -5,6 +5,7 @@ import Header from "@/components/layouts/Header";
 import {ReactNode} from "react";
 import {getMessages} from "next-intl/server";
 import {NextIntlClientProvider} from "next-intl";
+import Footer from "@/components/layouts/Footer";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -32,6 +33,7 @@ export default async function RootLayout({children, params: {locale}}: Props) {
         <NextIntlClientProvider messages={message}>
           <Header />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

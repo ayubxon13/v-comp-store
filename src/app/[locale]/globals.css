@@ -6,4 +6,7 @@
   .max-container {
     @apply max-w-[1572px] w-full mx-auto lg:px-5 px-4;
   }
+  body {
+    @apply bg-soft
+  }
 }

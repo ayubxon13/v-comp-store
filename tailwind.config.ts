@@ -46,7 +46,7 @@ const config: Config = {
           fontWeight: "600",
         },
       ],
-      "headings-h3-24": [
+      "headings-h4-24": [
         "28px",
         {
           lineHeight: "32px",

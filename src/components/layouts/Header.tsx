@@ -1,16 +1,18 @@
 import {Link} from "@/messages/navigation";
-import {Bars4Icon, UserIcon} from "@heroicons/react/24/outline";
+import {
+  Bars4Icon,
+  HeartIcon,
+  MagnifyingGlassIcon,
+  PhoneIcon,
+  ShoppingCartIcon,
+  UserIcon,
+} from "@heroicons/react/24/outline";
 import LocaleSwitcherSelect from "../LocaleSwitcher";
 import {useTranslations} from "next-intl";
 import Image from "next/image";
 import logo from "../../../public/logo.png";
-import like from "../../../public/icons/like.png";
-import scales from "../../../public/icons/scales.svg";
-import phone from "../../../public/icons/phone.svg";
-import search from "../../../public/icons/search.svg";
-import IconBtn from "../ui/buttons/primary/filled/IconBtn";
+import IconBtn from "../ui/buttons/primary/filled/PrimaryIconBtnFilled";
 import SearchInput from "../ui/inputs/search";
-import ShopIcon from "../../../public/icons/Shop";
 export default function Header() {
   const t = useTranslations("Navigations");
   const tBtn = useTranslations("ButtonPrimary");
@@ -52,14 +54,22 @@ export default function Header() {
                 <Bars4Icon className="text-soft" height={24} width={24} />
               </button>
               <Image src={logo} alt="logo image" />
-              <Image src={phone} alt="logo image" />
+              <PhoneIcon className="text-white" width={31} height={31} />
             </div>
             <div className="flex gap-[34px]">
               <IconBtn btnText={tBtn("productCategory")} />
               <div className="flex gap-[34px] ml-auto">
-                <Image src={search} alt="search icon" />
+                <MagnifyingGlassIcon
+                  className="text-white"
+                  width={31}
+                  height={31}
+                />
                 <button className="relative items-center">
-                  <ShopIcon color="white" />
+                  <ShoppingCartIcon
+                    className="text-white"
+                    width={31}
+                    height={31}
+                  />
                   <div className="absolute inline-flex m-[-12px] items-center justify-center w-6 h-6 text-uppercase-medium-12 text-soft bg-primary rounded-full top-1 end-1">
                     20
                   </div>
@@ -88,19 +98,18 @@ export default function Header() {
               </a>
               <span className="h-full border-l-2 border-gray-300"></span>
               <div className="flex gap-[15px]">
-                {[
-                  {src: scales, text: "20"},
-                  {src: like, text: "20"},
-                ].map((item, index) => (
-                  <button key={index} className="relative p-3">
-                    <Image src={item.src} alt={`${item.src} image`} />
-                    <div className="absolute inline-flex items-center justify-center w-6 h-6 text-uppercase-medium-12 text-dark bg-yellow rounded-full top-1 end-1">
-                      {item.text}
-                    </div>
-                  </button>
-                ))}
                 <button className="relative p-3">
-                  <ShopIcon color="#060F42" />
+                  <HeartIcon className="text-dark" width={40} height={40} />
+                  <div className="absolute inline-flex items-center justify-center w-6 h-6 text-uppercase-medium-12 text-dark bg-yellow rounded-full top-1 end-1">
+                    22
+                  </div>
+                </button>
+                <button className="relative p-3">
+                  <ShoppingCartIcon
+                    className="text-dark"
+                    width={40}
+                    height={40}
+                  />
                   <div className="absolute inline-flex items-center justify-center w-6 h-6 text-uppercase-medium-12 text-soft bg-primary rounded-full top-1 end-1">
                     20
                   </div>

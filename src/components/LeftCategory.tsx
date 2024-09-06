@@ -26,7 +26,6 @@ export default function LeftCategory() {
     "tablets",
     "printersAndMFPs",
     "networkEquipment",
-    1,
   ] as const;
 
   return (
