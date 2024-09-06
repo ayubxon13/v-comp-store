@@ -90,8 +90,8 @@ export default function Home() {
       <section className="max-container mt-12 mb-[24px]">
         <p className="text-headings-h4-24 mb-6 text-dark">Топ продаж</p>
         <div className="grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-x-4 lg:gap-y-[70px] gap-y-3">
-          {data.map((item) => (
-            <ProductCard />
+          {data.map((item, idx) => (
+            <ProductCard key={idx} />
           ))}
         </div>
         <MoreLinkBtn

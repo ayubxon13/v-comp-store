@@ -10,8 +10,11 @@ export default function News() {
           className="flex items-center gap-4 justify-between 
 "
         >
-          {Array.from({length: 4}).map(() => (
-            <div className="shadow-[0px_2px_10px_0px_#32324724] md:w-[371px] w-[242px] flex-shrink-0">
+          {Array.from({length: 4}).map((_, idx) => (
+            <div
+              key={idx}
+              className="shadow-[0px_2px_10px_0px_#32324724] md:w-[371px] w-[242px] flex-shrink-0"
+            >
               <Image
                 src="/news/1.png"
                 width={371}
