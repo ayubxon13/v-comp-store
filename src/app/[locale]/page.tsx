@@ -90,8 +90,8 @@ export default function Home() {
       <section className="max-container mt-12 mb-[24px]">
         <p className="text-headings-h4-24 mb-6 text-dark">Топ продаж</p>
         <div className="grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-x-4 lg:gap-y-[70px] gap-y-3">
-          {data.map((item, idx) => (
-            <ProductCard key={idx} />
+          {data.map((_, idx) => (
+            <ProductCard idx={idx} key={idx} />
           ))}
         </div>
         <MoreLinkBtn
@@ -113,12 +113,9 @@ export default function Home() {
             <hr className="border-[2px] border-white w-full" />
           </div>
           <div className="my-6 grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-x-4 lg:gap-y-[70px] gap-y-3">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            {Array.from({length: 6}).map((_, idx) => (
+              <ProductCard key={idx} idx={idx} />
+            ))}
           </div>
 
           <MoreLinkBtn className="text-white" text="Смотреть все товары" />

@@ -12,6 +12,8 @@ const config: Config = {
       "primary-hover": "#37BD8D",
       "primary-active": "#06A56C",
       secondary: "#01579B",
+      "secondary-hover": "#3582BF",
+      "secondary-active": "#01579B",
       red: "#E93232",
       yellow: "#FFCD1B",
       dark: "#060F42",

@@ -1,18 +1,19 @@
-import {Link} from "@/messages/navigation";
 import {
   Bars4Icon,
   HeartIcon,
   MagnifyingGlassIcon,
   PhoneIcon,
   ShoppingCartIcon,
+  SquaresPlusIcon,
   UserIcon,
 } from "@heroicons/react/24/outline";
 import LocaleSwitcherSelect from "../LocaleSwitcher";
 import {useTranslations} from "next-intl";
 import Image from "next/image";
 import logo from "../../../public/logo.png";
-import IconBtn from "../ui/buttons/primary/filled/PrimaryIconBtnFilled";
 import SearchInput from "../ui/inputs/search";
+import {Link} from "@/messages/navigation";
+import PrimaryBtnFilled from "../ui/buttons/primary/filled/PrimaryBtnFilled";
 export default function Header() {
   const t = useTranslations("Navigations");
   const tBtn = useTranslations("ButtonPrimary");
@@ -57,7 +58,12 @@ export default function Header() {
               <PhoneIcon className="text-white" width={31} height={31} />
             </div>
             <div className="flex gap-[34px]">
-              <IconBtn btnText={tBtn("productCategory")} />
+              <Link href={"/category"}>
+                <PrimaryBtnFilled
+                  icon={<SquaresPlusIcon width={24} height={24} />}
+                  btnText={tBtn("productCategory")}
+                />
+              </Link>
               <div className="flex gap-[34px] ml-auto">
                 <MagnifyingGlassIcon
                   className="text-white"
@@ -86,7 +92,12 @@ export default function Header() {
               <Link href="/">
                 <Image src={logo} alt="Website logo" />
               </Link>
-              <IconBtn btnText={tBtn("productCategory")} />
+              <Link href="/category">
+                <PrimaryBtnFilled
+                  icon={<SquaresPlusIcon width={24} height={24} />}
+                  btnText={tBtn("productCategory")}
+                />{" "}
+              </Link>
             </div>
             <SearchInput />
             <div className="flex items-center  max-w-max min-w-max">
